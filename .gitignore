@@ -1,3 +1,9 @@
 .idea
 .DS_Store
 **/.DS_Store
+###> symfony/framework-bundle ###
+symfony/.env
+symfony/public/bundles/
+symfony/var/
+symfony/vendor/
+###< symfony/framework-bundle ###
