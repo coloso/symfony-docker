@@ -1,0 +1,31 @@
+version: '3'
+services:
+  web: 
+    image: nginx:latest
+    build:
+      context: './docker-conf/nginx/'
+      dockerfile: Dockerfile
+    ports: ['80:80', '443:443']
+    volumes: [
+      './docker-conf/nginx/nginx.conf:/etc/nginx/conf.d/default.conf',
+      '.:/var/www/html/symfony'
+      ]
+
+  php:
+    image: php:7.2-fpm
+    build:
+      context: './docker-conf/php/'
+      dockerfile: Dockerfile
+    volumes: [
+      './docker-conf/php/php-fpm.conf:/usr/local/etc/php-fpm.conf',
+      '.:/var/www/html/symfony'
+      ]
+
+  db:
+    image: mysql:latest
+    ports: ['3306:3306']
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=symfony
+      - MYSQL_USER=symfony
+      - MYSQL_PASSWORD=password
