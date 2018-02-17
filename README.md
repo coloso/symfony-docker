@@ -1,13 +1,16 @@
-# Symfony4 Docker Development Environment
-
-### Built With
-- [nginx](https://hub.docker.com/_/nginx/) 1.13.+
-- [php-fpm](https://hub.docker.com/_/php/) 7.2.+
-- [mysql](https://hub.docker.com/_/mysql/) 5.7.+
+# Symfony4 Docker Development Stack
+This is a stack for running Symfony4 into Docker containers using docker-compose. 
 
 ### Prerequisites
 * [Docker](https://www.docker.com/)
 
+### Container
+- [nginx](https://hub.docker.com/_/nginx/) 1.13.+
+- [php-fpm](https://hub.docker.com/_/php/) 7.2.+
+    - [composer](https://getcomposer.org/) 
+    - [git](https://git-scm.com)
+    - [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/lang/en/) and [node.js](https://nodejs.org/en/) (if you will use Symfony[Encore](https://symfony.com/doc/current/frontend/encore/installation.html)for managing CSS and JavaScript)
+- [mysql](https://hub.docker.com/_/mysql/) 5.7.+
 
 ### Installing
 
@@ -23,7 +26,7 @@ install latest version of [Symfony](http://symfony.com/doc/current/setup.html) v
 ```
 $ composer create-project symfony/skeleton symfony
 ```
-### Browser
-call localhost in your Browser:
+ 
+call localhost in your browser:
 - [http://localhost](http://localhost/)
 - [https://localhost](https://localhost/)
