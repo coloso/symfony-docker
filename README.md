@@ -1,5 +1,5 @@
-# Symfony4 Docker Development Stack
-This is a stack for running Symfony4 into Docker containers using docker-compose. 
+# Symfony 4 Docker Development Stack
+This is a lightweight stack for running Symfony 4 into Docker containers using docker-compose. 
 
 ### Prerequisites
 * [Docker](https://www.docker.com/)
