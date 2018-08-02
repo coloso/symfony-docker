@@ -15,4 +15,4 @@ before_install:
     - sudo service mysql stop
 
 script:
-    - docker-compose up -d
+    - docker-compose -f docker-compose.travis.yml up -d
