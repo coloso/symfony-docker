@@ -5,11 +5,11 @@ This is a stack for running Symfony4 into Docker containers using docker-compose
 * [Docker](https://www.docker.com/)
 
 ### Container
-- [nginx](https://hub.docker.com/_/nginx/) 1.13.+
-- [php-fpm](https://hub.docker.com/_/php/) 7.2.+
+ - [nginx](https://hub.docker.com/_/nginx/) 1.15.+
+ - [php-fpm](https://hub.docker.com/_/php/) 7.2.+
     - [composer](https://getcomposer.org/) 
+    - [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/lang/en/) and [node.js](https://nodejs.org/en/) (if you will use Symfony [Encore](https://symfony.com/doc/current/frontend/encore/installation.html) for managing CSS and JavaScript)
     - [git](https://git-scm.com)
-    - [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/lang/en/) and [node.js](https://nodejs.org/en/) (if you will use Symfony[Encore](https://symfony.com/doc/current/frontend/encore/installation.html)for managing CSS and JavaScript)
 - [mysql](https://hub.docker.com/_/mysql/) 5.7.+
 
 ### Installing
@@ -24,7 +24,7 @@ run docker and connect to container:
 
 install latest version of [Symfony](http://symfony.com/doc/current/setup.html) via composer:
 ```
-$ composer create-project symfony/skeleton symfony
+$ composer create-project symfony/website-skeleton symfony
 ```
  
 call localhost in your browser:
