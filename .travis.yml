@@ -1,7 +1,7 @@
 sudo: required
 
 env:
-    DOCKER_COMPOSE_VERSION: 1.16.1
+    DOCKER_COMPOSE_VERSION: 1.22.0
 
 services:
     - docker
@@ -12,6 +12,7 @@ before_install:
     - sudo mv docker-compose /usr/local/bin
     - docker-compose -v
     - docker -v
+    - sudo service mysql stop
 
 script:
     - docker-compose up -d
