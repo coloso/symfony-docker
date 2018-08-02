@@ -1,5 +1,6 @@
 # Symfony 4 Docker Development Stack
 This is a lightweight stack for running Symfony 4 into Docker containers using docker-compose. 
+
 [![Build Status](https://travis-ci.org/coloso/symfony-docker.svg?branch=master)](https://travis-ci.org/coloso/symfony-docker)
 ### Prerequisites
 * [Docker](https://www.docker.com/)
