@@ -5,6 +5,10 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends libpq-dev wget gnupg \
   && docker-php-ext-install mysqli pdo_pgsql pdo_mysql
 
+# fix php zip on debian os for symfony 4.2
+RUN apt-get install -y libzip-dev \
+  && docker-php-ext-install zip
+
 # curl
 RUN apt-get install -y curl
 
