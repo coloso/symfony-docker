@@ -9,7 +9,7 @@ This is a lightweight stack for running Symfony 4 into Docker containers using d
  - [nginx](https://hub.docker.com/_/nginx/) 1.15.+
  - [php-fpm](https://hub.docker.com/_/php/) 7.2.+
     - [composer](https://getcomposer.org/) 
-    - [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/lang/en/) and [node.js](https://nodejs.org/en/) (if you will use Symfony [Encore](https://symfony.com/doc/current/frontend/encore/installation.html) for managing CSS and JavaScript)
+    - [yarn](https://yarnpkg.com/lang/en/) and [node.js](https://nodejs.org/en/) (if you will use Symfony [Encore](https://symfony.com/doc/current/frontend/encore/installation.html) for managing CSS and JavaScript)
     - [git](https://git-scm.com)
 - [mysql](https://hub.docker.com/_/mysql/) 5.8.+
 
@@ -17,7 +17,7 @@ This is a lightweight stack for running Symfony 4 into Docker containers using d
 
 run docker and connect to container:
 ```
- docker-compose up
+ docker-compose up --build
 ```
 ```
  docker-compose exec php bash
