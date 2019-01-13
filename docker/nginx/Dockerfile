@@ -1,8 +1,16 @@
-FROM nginx:latest
+FROM alpine:3.8
 
-RUN apt-get update \
-# install openssl
-  && apt-get install -y --no-install-recommends openssl
+RUN apk add --update nginx
+RUN rm -rf /var/cache/apk/* && rm -rf /tmp/*
 
-# generate certificate
-RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt -subj "/C=DE/ST=Berlin/L=Berlin/O=Global Security/OU=IT Department/CN=example.com"
+ADD nginx.conf /etc/nginx/
+ADD nginx.conf /etc/nginx/conf.d/upstream.conf
+ADD symfony.conf /etc/nginx/conf.d/default.conf
+
+RUN echo "upstream php-upstream { server php:9001; }" > /etc/nginx/conf.d/upstream.conf
+
+RUN adduser -D -g '' -G www-data www-data
+
+CMD ["nginx"]
+
+EXPOSE 80

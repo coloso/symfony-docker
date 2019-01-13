@@ -1,35 +1,49 @@
-FROM php:7.2-fpm
+FROM alpine:3.8
 
-RUN apt-get update \
-# pdo mySQL
-  && apt-get install -y --no-install-recommends libpq-dev wget gnupg \
-  && docker-php-ext-install mysqli pdo_pgsql pdo_mysql
+RUN apk add --update \
+    php7-fpm \
+    php7-apcu \
+    php7-ctype \
+    php7-curl \
+    php7-dom \
+    php7-gd \
+    php7-iconv \
+    php7-imagick \
+    php7-json \
+    php7-intl \
+    php7-mcrypt \
+    php7-fileinfo \
+    php7-mbstring \
+    php7-opcache \
+    php7-openssl \
+    php7-pdo \
+    php7-pdo_mysql \
+    php7-mysqli \
+    php7-xml \
+    php7-zlib \
+    php7-phar \
+    php7-tokenizer \
+    php7-session \
+    php7-simplexml \
+#    php7-xdebug \
+    php7-zip \
+    make \
+    curl \
+    nodejs \
+    yarn
 
-# fix php zip on debian os for symfony 4.2
-RUN apt-get install -y libzip-dev \
-  && docker-php-ext-install zip
+RUN rm -rf /var/cache/apk/* && rm -rf /tmp/* && \
+    curl --insecure https://getcomposer.org/composer.phar -o /usr/bin/composer && chmod +x /usr/bin/composer
 
-# curl
-RUN apt-get install -y curl
+ADD symfony.ini /etc/php7/conf.d/
+ADD symfony.ini /etc/php7/cli/conf.d/
 
-# composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-  && rm -f /tmp/composer-setup.*
+#ADD xdebug.ini  /etc/php7/conf.d/
 
-# npm & node
-RUN curl -sL https://deb.nodesource.com/setup_9.x | bash
-RUN apt-get install -y nodejs npm \
-  && update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
-# build tools
-RUN apt-get install -y build-essential
+ADD php-fpm.conf /etc/php7/php-fpm.d/
 
-# bugfix: remove cmdtest to install yarn correctly.
-RUN apt-get remove -y cmdtest
+CMD ["php-fpm7", "-F"]
 
-# yarn package manager
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
-  && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-RUN apt-get install -y yarn
+WORKDIR /var/www/symfony
 
-# install git
-RUN apt-get install -y git
+EXPOSE 9001

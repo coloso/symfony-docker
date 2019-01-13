@@ -11,7 +11,7 @@ This is a lightweight stack for running Symfony 4 into Docker containers using d
     - [composer](https://getcomposer.org/) 
     - [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/lang/en/) and [node.js](https://nodejs.org/en/) (if you will use Symfony [Encore](https://symfony.com/doc/current/frontend/encore/installation.html) for managing CSS and JavaScript)
     - [git](https://git-scm.com)
-- [mysql](https://hub.docker.com/_/mysql/) 5.7.+
+- [mysql](https://hub.docker.com/_/mysql/) 5.8.+
 
 ### Installing
 
@@ -25,9 +25,8 @@ run docker and connect to container:
 
 install latest version of [Symfony](http://symfony.com/doc/current/setup.html) via composer:
 ```
-$ composer create-project symfony/website-skeleton symfony
+$ composer create-project symfony/website-skeleton .
 ```
  
 call localhost in your browser:
 - [http://localhost](http://localhost/)
-- [https://localhost](https://localhost/)
