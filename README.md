@@ -26,6 +26,22 @@ install latest version of [Symfony](http://symfony.com/doc/current/setup.html) v
 ```
 $ composer create-project symfony/website-skeleton .
 ```
- 
+
+Update Symfony env variables (.env) 
+```
+#symfony/.env
+#...
+DATABASE_URL=mysql://root:root@mysql:3306/symfony
+#...
+```
+Restart all docker container
+```
+ docker-compose down
+```
+```
+ docker-compose up -d
+```
+
+
 call localhost in your browser:
 - [http://localhost](http://localhost/)
