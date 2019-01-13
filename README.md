@@ -19,7 +19,7 @@ run docker and connect to container:
  docker-compose up --build
 ```
 ```
- docker-compose exec php bash
+ docker-compose exec php sh
 ```
 
 install latest version of [Symfony](http://symfony.com/doc/current/setup.html) via composer:
