@@ -1,5 +1,7 @@
 FROM alpine:3.8
 
+LABEL maintainer="Janosch Kocsis <jk@coloso.de>"
+
 RUN apk add --update \
     php7-fpm \
     php7-apcu \

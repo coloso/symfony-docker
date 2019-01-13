@@ -1,5 +1,7 @@
 FROM alpine:3.8
 
+LABEL maintainer="Janosch Kocsis <jk@coloso.de>"
+
 RUN apk add --update nginx
 RUN rm -rf /var/cache/apk/* && rm -rf /tmp/*
 
