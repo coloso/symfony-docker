@@ -37,15 +37,16 @@ RUN apk add --update \
 RUN rm -rf /var/cache/apk/* && rm -rf /tmp/* && \
     curl --insecure https://getcomposer.org/composer.phar -o /usr/bin/composer && chmod +x /usr/bin/composer
 
-ADD symfony.ini /etc/php7/conf.d/
-ADD symfony.ini /etc/php7/cli/conf.d/
-
+ADD php.ini /etc/php7/conf.d/
+ADD php.ini /etc/php7/cli/conf.d/
+ADD php-fpm.conf /etc/php7/php-fpm.d/
 #ADD xdebug.ini  /etc/php7/conf.d/
 
-ADD php-fpm.conf /etc/php7/php-fpm.d/
+WORKDIR /var/www/symfony
+
+RUN adduser -D -g 'www' www \
+    && chown -R www:www /var/www
 
 CMD ["php-fpm7", "-F"]
-
-WORKDIR /var/www/symfony
 
 EXPOSE 9001

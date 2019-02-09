@@ -1,5 +1,5 @@
 # Symfony4 Docker Development Stack
-This is a lightweight stack on Alpine for running Symfony4 into Docker containers using docker-compose. 
+This is a lightweight stack based on Alpine Linux for running Symfony 4 into Docker containers using docker-compose. 
 
 [![Build Status](https://travis-ci.org/coloso/symfony-docker.svg?branch=master)](https://travis-ci.org/coloso/symfony-docker)
 ### Prerequisites
@@ -9,7 +9,7 @@ This is a lightweight stack on Alpine for running Symfony4 into Docker container
  - [nginx](https://hub.docker.com/_/nginx/) 1.15.+
  - [php-fpm](https://hub.docker.com/_/php/) 7.2.+
     - [composer](https://getcomposer.org/) 
-    - [yarn](https://yarnpkg.com/lang/en/) and [node.js](https://nodejs.org/en/) (if you will use Symfony [Encore](https://symfony.com/doc/current/frontend/encore/installation.html) for managing CSS and JavaScript)
+    - [yarn](https://yarnpkg.com/lang/en/) and [node.js](https://nodejs.org/en/) (if you will use [Encore](https://symfony.com/doc/current/frontend/encore/installation.html) for managing JS and CSS)
 - [mysql](https://hub.docker.com/_/mysql/) 5.8.+
 
 ### Installing
