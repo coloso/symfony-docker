@@ -27,6 +27,7 @@ RUN apk add --update \
     php7-tokenizer \
     php7-session \
     php7-simplexml \
+    php7-xmlwriter \
 #    php7-xdebug \
     php7-zip \
     make \
