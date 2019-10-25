@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.10
 
 LABEL maintainer="Janosch Kocsis <jk@coloso.de>"
 
@@ -48,6 +48,6 @@ WORKDIR /var/www/symfony
 RUN adduser -D -g 'www' www \
     && chown -R www:www /var/www
 
-CMD ["php-fpm7", "-F"]
-
 EXPOSE 9001
+
+CMD ["php-fpm7", "-F"]

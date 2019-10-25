@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.10
 
 LABEL maintainer="Janosch Kocsis <jk@coloso.de>"
 
@@ -12,6 +12,6 @@ RUN echo "upstream php-upstream { server php:9001; }" > /etc/nginx/conf.d/upstre
 RUN adduser -D -g 'www' www \
     && chown -R www:www /var/www
 
-CMD ["nginx"]
-
 EXPOSE 80
+
+CMD ["nginx"]

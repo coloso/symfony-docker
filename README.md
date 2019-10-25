@@ -6,8 +6,8 @@ This is a lightweight stack based on Alpine Linux for running Symfony 4 into Doc
 * [Docker](https://www.docker.com/)
 
 ### Container
- - [nginx](https://hub.docker.com/_/nginx/) 1.15.+
- - [php-fpm](https://hub.docker.com/_/php/) 7.2.+
+ - [nginx](https://hub.docker.com/_/nginx/) 1.16.+
+ - [php-fpm](https://hub.docker.com/_/php/) 7.3.+
     - [composer](https://getcomposer.org/) 
     - [yarn](https://yarnpkg.com/lang/en/) and [node.js](https://nodejs.org/en/) (if you will use [Encore](https://symfony.com/doc/current/frontend/encore/installation.html) for managing JS and CSS)
 - [mysql](https://hub.docker.com/_/mysql/) 5.7.+
