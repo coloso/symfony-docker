@@ -1,5 +1,5 @@
-# Symfony4 Docker Development Stack
-This is a lightweight stack based on Alpine Linux for running Symfony 4 into Docker containers using docker-compose. 
+# Symfony5 Docker Development Stack
+This is a lightweight stack based on Alpine Linux for running Symfony 5 into Docker containers using docker-compose. 
 
 [![Build Status](https://travis-ci.org/coloso/symfony-docker.svg?branch=master)](https://travis-ci.org/coloso/symfony-docker)
 ### Prerequisites
@@ -24,12 +24,18 @@ run docker and connect to container:
 
 install latest version of [Symfony](http://symfony.com/doc/current/setup.html) via composer:
 ```
+# traditional web application
 $ composer create-project symfony/website-skeleton .
 ```
-
-configure the database connection information in your root directory `.env` 
+or
 ```
-DATABASE_URL=mysql://root:root@mysql:3306/symfony
+# microservice, console application or API
+$ composer create-project symfony/skeleton .
+```
+
+modify your DATABASE_URL config in .env 
+```
+DATABASE_URL=mysql://root:root@mysql:3306/symfony?serverVersion=5.7
 ```
 
 call localhost in your browser:
