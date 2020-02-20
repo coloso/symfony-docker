@@ -1,9 +1,8 @@
-FROM alpine:3.10
+FROM alpine:3.11
 
 LABEL maintainer="Janosch Kocsis <jk@coloso.de>"
 
 RUN apk add --update \
-    php7-fpm \
     php7-apcu \
     php7-ctype \
     php7-curl \
@@ -15,6 +14,7 @@ RUN apk add --update \
     php7-intl \
     php7-mcrypt \
     php7-fileinfo \
+    php7-fpm \
     php7-mbstring \
     php7-opcache \
     php7-openssl \
@@ -29,6 +29,7 @@ RUN apk add --update \
     php7-simplexml \
     php7-xmlwriter \
 #    php7-xdebug \
+    php7-xsl \
     php7-zip \
     make \
     curl \
