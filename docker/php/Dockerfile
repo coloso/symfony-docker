@@ -2,6 +2,9 @@ FROM alpine:3.11
 
 LABEL maintainer="Janosch Kocsis <jk@coloso.de>"
 
+RUN addgroup -S www \
+    && adduser -S -G www www
+
 RUN apk add --update \
     php7-apcu \
     php7-ctype \
@@ -45,9 +48,6 @@ ADD php-fpm.conf /etc/php7/php-fpm.d/
 #ADD xdebug.ini  /etc/php7/conf.d/
 
 WORKDIR /var/www/symfony
-
-RUN adduser -D -g 'www' www \
-    && chown -R www:www /var/www
 
 EXPOSE 9001
 
