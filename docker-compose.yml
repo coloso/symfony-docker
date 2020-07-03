@@ -10,16 +10,9 @@ services:
       - MYSQL_PASSWORD=password
   php:
     build: ./docker/php
-    ports: ['9000:9001']
-    links:
-      - mysql
-    volumes:
-      - ./symfony/:/var/www/symfony:cached
+    ports: ['9000:9000']
+    volumes: ['./symfony/:/var/www/symfony:cached']
   nginx:
     build: ./docker/nginx
     ports: ['80:80']
-    links:
-      - php
-    volumes:
-      - ./logs/nginx:/var/log/nginx:cached
-      - ./symfony/:/var/www/symfony:cached
+    volumes: ['./symfony/:/var/www/symfony:cached']
