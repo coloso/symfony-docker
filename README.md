@@ -6,8 +6,8 @@ This is a lightweight stack based on Alpine Linux for running Symfony5 into Dock
 * [Docker](https://www.docker.com/)
 
 ### Container
- - [nginx](https://pkgs.alpinelinux.org/packages?name=nginx&branch=v3.10) 1.16.+
- - [php-fpm](https://pkgs.alpinelinux.org/packages?name=php7&branch=v3.10) 7.3.+
+ - [nginx](https://pkgs.alpinelinux.org/packages?name=nginx&branch=v3.10) 1.18.+
+ - [php-fpm](https://pkgs.alpinelinux.org/packages?name=php7&branch=v3.10) 7.4.+
     - [composer](https://getcomposer.org/) 
     - [yarn](https://yarnpkg.com/lang/en/) and [node.js](https://nodejs.org/en/) (if you will use [Encore](https://symfony.com/doc/current/frontend/encore/installation.html) for managing JS and CSS)
 - [mysql](https://hub.docker.com/_/mysql/) 5.7.+

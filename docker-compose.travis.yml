@@ -9,14 +9,7 @@ services:
       - MYSQL_PASSWORD=password
   php:
     build: ./docker/php
-    links:
-      - mysql
-    volumes:
-      - ./symfony/:/var/www/symfony:cached
+    volumes: ['./symfony/:/var/www/symfony:cached']
   nginx:
     build: ./docker/nginx
-    links:
-      - php
-    volumes:
-      - ./logs/nginx:/var/log/nginx:cached
-      - ./symfony/:/var/www/symfony:cached
+    volumes: ['./symfony/:/var/www/symfony:cached']
