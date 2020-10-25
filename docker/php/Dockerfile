@@ -16,8 +16,8 @@ ENV PATH=$PATH:/root/composer/vendor/bin COMPOSER_ALLOW_SUPERUSER=1
 
 ADD php.ini /etc/php/conf.d/
 ADD php.ini /etc/php/cli/conf.d/
+ADD php.ini /usr/local/etc/php
 ADD php-fpm.conf /etc/php/php-fpm.d/
-#ADD xdebug.ini  /etc/php/conf.d/
 
 WORKDIR /var/www/symfony
 
