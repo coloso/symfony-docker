@@ -1,7 +1,5 @@
 FROM php:7.4-fpm-alpine
 
-LABEL maintainer="Janosch Kocsis <jk@coloso.de>"
-
 RUN apk add --update \
     make \
     curl \

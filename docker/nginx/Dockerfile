@@ -1,12 +1,6 @@
-FROM alpine:3.12
+FROM nginx:alpine
 
-LABEL maintainer="Janosch Kocsis <jk@coloso.de>"
-
-RUN addgroup -S www-data \
-    && adduser -S -G www-data www-data
-
-RUN apk add --update nginx
-RUN rm -rf /var/cache/apk/* && rm -rf /tmp/*
+RUN adduser -S -G www-data www-data
 
 ADD nginx.conf /etc/nginx/
 ADD symfony.conf /etc/nginx/conf.d/default.conf
