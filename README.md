@@ -21,7 +21,7 @@ run docker and connect to container:
 ```
  docker-compose exec php sh
 ```
-:heavy_exclamation_mark: <b> only symfony/skeleton working with php8 atm.<b> :heavy_exclamation_mark:
+:heavy_exclamation_mark: <b> only symfony/skeleton working with php8 atm.</b> :heavy_exclamation_mark:
 
 install latest version of [Symfony](http://symfony.com/doc/current/setup.html) via composer:
 ```
