@@ -1,5 +1,5 @@
-# Symfony5 Docker Development Stack
-This is a lightweight stack based on Alpine Linux for running Symfony5 into Docker containers using docker-compose. 
+# Symfony 5 Docker-Development-Stack
+This is a lightweight stack based on Alpine Linux for running Symfony 5 into Docker containers using docker compose. 
 <!--
 [![Build Status](https://travis-ci.org/coloso/symfony-docker.svg?branch=master)](https://travis-ci.org/coloso/symfony-docker)
 -->
@@ -7,10 +7,10 @@ This is a lightweight stack based on Alpine Linux for running Symfony5 into Dock
 * [Docker](https://www.docker.com/)
 
 ### Container
- - [nginx](https://hub.docker.com/_/nginx) 1.21.+
  - [php-fpm](https://hub.docker.com/_/php) 8.0
     - [composer](https://getcomposer.org/) 
     - [yarn](https://yarnpkg.com/lang/en/) and [node.js](https://nodejs.org/en/) (if you will use [Encore](https://symfony.com/doc/current/frontend/encore/installation.html) for managing JS and CSS)
+- [nginx](https://hub.docker.com/_/nginx) 1.21.+
 - [mysql](https://hub.docker.com/_/mysql/) 5.7.+
 
 ### Installing
@@ -23,7 +23,7 @@ run docker and connect to container:
  docker compose exec php sh
 ```
 
-install latest version of [Symfony](http://symfony.com/doc/current/setup.html) via composer:
+install the latest version of [Symfony](http://symfony.com/doc/current/setup.html) via composer:
 ```
 # traditional web application: 
 composer create-project symfony/website-skeleton .
