@@ -4,7 +4,7 @@ RUN apk add --update \
     make \
     curl \
     nodejs \
-    nodejs-npm \
+    npm \
     yarn
 
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
