@@ -1,42 +1,35 @@
-# Symfony 5 Docker-Development-Stack
-This is a lightweight stack based on Alpine Linux for running Symfony 5 into Docker containers using docker compose. 
+# Symfony 6 Docker-Development-Stack
+This is a lightweight stack based on Alpine Linux for running Symfony 6 into Docker containers using docker compose. 
 <!--
 [![Build Status](https://travis-ci.org/coloso/symfony-docker.svg?branch=master)](https://travis-ci.org/coloso/symfony-docker)
 -->
-### Prerequisites
-* [Docker](https://www.docker.com/)
 
 ### Container
  - [php-fpm](https://hub.docker.com/_/php) 8.0
     - [composer](https://getcomposer.org/) 
     - [yarn](https://yarnpkg.com/lang/en/) and [node.js](https://nodejs.org/en/) (if you will use [Encore](https://symfony.com/doc/current/frontend/encore/installation.html) for managing JS and CSS)
-- [nginx](https://hub.docker.com/_/nginx) 1.21.+
-- [mysql](https://hub.docker.com/_/mysql/) 5.7.+
+- [nginx](https://hub.docker.com/_/nginx) 1.21
+- [mongo](https://hub.docker.com/_/mongo) 4.4
 
 ### Installing
 
 run docker and connect to container:
 ```
- docker compose up --build
+ docker-compose up -d
 ```
 ```
- docker compose exec php sh
+ docker-compose exec php sh
 ```
 
 install the latest version of [Symfony](http://symfony.com/doc/current/setup.html) via composer:
 ```
 # traditional web application: 
-composer create-project symfony/website-skeleton .
+composer create-project symfony/website-skeleton:"6.0.x@dev" .
 ```
 or 
 ```
 # microservice, console application or API:
-composer create-project symfony/skeleton .
-```
-
-modify your DATABASE_URL config in .env 
-```
-DATABASE_URL=mysql://root:root@mysql:3306/symfony?serverVersion=5.7
+composer create-project symfony/skeleton:"6.0.x@dev" .
 ```
 
 ### Ready up
