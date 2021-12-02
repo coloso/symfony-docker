@@ -24,12 +24,12 @@ run docker and connect to container:
 install the latest version of [Symfony](http://symfony.com/doc/current/setup.html) via composer:
 ```
 # traditional web application: 
-composer create-project symfony/website-skeleton:"6.0.x@dev" .
+composer create-project symfony/website-skeleton .
 ```
 or 
 ```
 # microservice, console application or API:
-composer create-project symfony/skeleton:"6.0.x@dev" .
+composer create-project symfony/skeleton .
 ```
 
 ### Ready up
