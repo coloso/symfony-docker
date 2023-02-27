@@ -1,12 +1,10 @@
 # Symfony 6 Docker-Development-Stack
 This is a lightweight stack based on Alpine Linux for running Symfony 6 into Docker containers using docker compose. 
-<!--
-[![Build Status](https://travis-ci.org/coloso/symfony-docker.svg?branch=master)](https://travis-ci.org/coloso/symfony-docker)
--->
+
 ### Container
 | name          | contains                                                                                                                                                                  | port       |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
-| php           | [php-fpm](https://hub.docker.com/_/php) 8.1, [composer](https://getcomposer.org/) 2.4, [yarn](https://yarnpkg.com/lang/en/) 1.22, [node.js](https://nodejs.org/en/) 16.17 | 9000       |
+| php           | [php-fpm](https://hub.docker.com/_/php) 8.2, [composer](https://getcomposer.org/) 2.4, [yarn](https://yarnpkg.com/lang/en/) 1.22, [node.js](https://nodejs.org/en/) 16.17 | 9000       |
 | nginx         | [nginx](https://hub.docker.com/_/nginx) 1.23                                                                                                                              | 80         |
 | mongo         | [mongoDB](https://hub.docker.com/_/mongo) 6.0                                                                                                                             | 27017      |
 
@@ -31,8 +29,8 @@ composer create-project symfony/skeleton .
 ```
 
 ### Ready up
-call [localhost](http://localhost/) in your browser
- 
-### Thanks a lot to
+open [localhost](http://localhost/) in your browser
+
+### Reference links
 https://github.com/mlocati/docker-php-extension-installer \
 https://github.com/denji/nginx-tuning
